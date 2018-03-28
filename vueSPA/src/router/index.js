@@ -5,9 +5,7 @@ import ShedulePage from '@/components/pages/shedule/shedule.vue';
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    { path: '/', component: HomePage, name: 'Home' },
-    { path: '/shedule', component: ShedulePage, name: 'ShedulePage' }
-  ]
-})
+export default [
+  { path: '/', component: HomePage, name: 'Home' },
+  { path: '/shedule', component: ShedulePage, name: 'ShedulePage' }
+]
