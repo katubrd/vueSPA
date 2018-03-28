@@ -3,11 +3,11 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import { store } from './store/store'
-import Routes from './router/index.js'
+import routes from './router/index.js'
 
 
 const router = new VueRouter({
-    routes: Routes,
+    routes,
     mode: 'history'
 });
 
