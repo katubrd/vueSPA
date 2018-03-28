@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
         stages: ['technology', 'bussines', 'workshops'],
         view: 'technology',
         speakers: [{
-                // id: '',
+                id: '1',
                 name: 'Andres Abogabir',
                 company: 'California Institute of the Arts',
                 speaches: [{
@@ -25,7 +25,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '2',
                 name: 'Marc-Olivier Jodoin',
                 company: 'Macquarie University',
                 speaches: [{
@@ -39,7 +40,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '3',
                 name: 'Annie Spratt',
                 company: 'University of Virginia',
                 speaches: [{
@@ -53,7 +55,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '4',
                 name: 'Joshua Earle',
                 company: 'The University of Edinburgh',
                 speaches: [{
@@ -67,7 +70,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '5',
                 name: 'Jodie Morgan',
                 company: 'University of Pennsylvania',
                 speaches: [{
@@ -81,7 +85,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '6',
                 name: 'Yiran Ding',
                 company: 'Yale University',
                 speaches: [{
@@ -95,7 +100,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '7',
                 name: 'Linda Xu',
                 company: 'Wesleyan University',
                 speaches: [{
@@ -109,7 +115,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '8',
                 name: 'Jeremy Galliani',
                 company: 'The University of North Carolina at Chapel Hill',
                 speaches: [{
@@ -123,7 +130,8 @@ export const store = new Vuex.Store({
                 about: 'The former Program Director and current faculty in the Graphic Design Program at CalArts. Her design office, LSD (Louise Sandhaus Design), partners with multiple disciplines to realize interpretive projects from the simple to the complex, regardless of media. Clients include Los Angeles County Museum of Art, UCLA Hammer Museum, City of Los Angeles Cultural Affairs Department, Los Angeles Natural History Museum, Los Angeles World Airports (LAX) and Association of Children’s Museums.'
                     // links: [{}]
             },
-            { // id: '',
+            {
+              id: '9',
                 name: 'Viktor Nikolaienko',
                 company: 'Duke University',
                 speaches: [{
@@ -140,8 +148,8 @@ export const store = new Vuex.Store({
         ]
     },
     getters: {
-        filterSpeakersByStage: state => speakers => state.speakers.filter(speaker => speaker.speaches.filter(speach => speach.stage === stage))
-    },
+        filterSpeakersByStage: state => stage => state.speakers.filter(speaker => speaker.speaches.filter(speach => speach.stage === stage).length > 0)
+      },
     modules: {
 
     }

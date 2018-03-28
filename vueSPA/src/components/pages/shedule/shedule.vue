@@ -18,7 +18,7 @@
             <section class="presentation-list-container">
               <div class="presentation-list">
                 <ul>
-                  <li v-for="speakers in stageBussines" class="presetation">
+                  <li v-for="speaker in stageBussines" class="presentation" :key="speaker.id">
                     <div class="view">
                       <img src="" alt="">
                       <h5> {{ speaker.speaches.title }}</h5>
